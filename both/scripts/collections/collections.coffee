@@ -12,6 +12,7 @@
 #######################################################
 @Recommendations = new Mongo.Collection("recommendations")
 @Challenges = new Mongo.Collection("challenges")
+@Questions = new Mongo.Collection("questions")
 @Solutions = new Mongo.Collection("solutions")
 @Feedback = new Mongo.Collection("feedback")
 @Profiles = new Mongo.Collection("profiles")
