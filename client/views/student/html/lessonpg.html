@@ -1,0 +1,194 @@
+<template name="lessonpg">
+
+    <style>
+
+
+        .panel > .panel-heading {
+            background-image: none;
+            background-color: #A02D67;
+            color: white;
+
+        }
+
+        .alert > .alert-success {
+            background-color: #A02D67;
+            color: white;
+
+        }
+
+        .progress  {
+          background-color: white;
+            color: white;
+            height: 50px;
+
+        }
+
+        .progress > .progress-bar-success {
+          background-color: #862D65;
+            color: white;
+
+        }
+
+        .btn-group > .btn-success {
+          background-color: #862D65;
+            color: white;
+            border: none;
+
+        }
+
+        .btn > .btn-success {
+          background-color: #862D65;
+            color: white;
+            border: none;
+            width: 230px;
+
+        }
+
+       
+
+        </style>
+
+  <div class="header">
+<center>
+
+  <br/>
+</center>
+
+
+
+  </div>
+
+  <body>
+
+    <!--CONTAINER 1 START-->
+      <div class="container">
+          <center>
+              <h1>I Topic Name <!-- Trigger the modal with a button -->
+               
+                </h1>
+<!---progress bar-->
+             <div class="col-md-9 col-xs-12">
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"><h2>40%</h2>
+                          </div>
+                      </div>
+             </div>
+<!--end of progress bar-->
+            
+      </center>
+    <!--End Modal-->
+
+    <!--
+        <div class="alert alert-success">
+          <div class="col-md-2">
+              </span><h4><strong>Course Progress:</strong></h4>
+          </div>
+      <div class="col-md-8">
+          <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">40%
+              </div>
+          </div>
+        </div>
+      <div class="col-md-1">
+        </div>
+      <div class="btn-group">
+          <a href="#" class="btn btn-sm btn-success">View Course</a>
+          <a href="#" class="btn btn-sm btn-success">Continue</a>
+      </div>
+    </div>
+    -->
+    <!--CONTAINER 1 END-->
+    </div>
+    <!--CONTAINER 2 START-->
+    <div class="container">
+
+    <!--Course Progress-->
+      <div class="col-md-12 col-sm-12">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+              <h3>1.1 Lesson Name</h3>
+            </div>
+        <div class="panel-heading">
+          <p>
+          <a href="#" target="_blank" class="list-group-item">1</a>
+          <a href="#" target="_blank" class="list-group-item">?</a>
+          <a href="#" target="_blank" class="list-group-item">2</a>
+          <a href="#" target="_blank" class="list-group-item">?</a>
+          <a href="#" target="_blank" class="list-group-item">3</a>
+          <a href="#" target="_blank" class="list-group-item">?</a>
+          </p>
+            </div>
+          <div class="panel-body">
+                 
+                     <center>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+                       </p>
+                      
+                    </center>
+             <div class="btn btn-right">
+                  <a href="{{build_url "quizpg"}}" class="btn btn-lg btn-success" id="lessonpg_con" align="right">Continue</a>
+              </div>
+                </div>
+            </div>
+        </div>
+    <!--Course Progress-->
+
+    <!--What is Python
+      <div class="col-md-6 col-sm-12">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+              <h4>What is Python?</h4>
+            </div>
+          <div class="panel-body">
+            The programming language Python was conceived in the late 1980s,[1] and its implementation was started in December 1989[2] by Guido van Rossum at CWI in the Netherlands as a successor to ABC capable of exception handling and interfacing with the Amoeba operating system.[3] Van Rossum is Python's principal author, and his continuing central role in deciding the direction of Python is reflected in the title given to him by the Python community, Benevolent Dictator for Life (BDFL).[4][5] Python was named for the BBC TV show Monty Python's Flying Circus.[6]
+          </div>
+            </div>
+        </div>
+    What is Python-->
+
+
+
+
+    </div>
+    
+
+    
+
+    <!--CONTAINER 4 START-->
+    <div class="containter">
+    </div>
+    <div class="container">
+     
+
+      <div class="container">
+
+    <!--Online Resources-->
+        <div class="col-md-12 col-sm-12" >
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3>Online Resources</h3>
+            <p>Here is a list of useful online resources</p>
+              </div>
+              <div class="panel-body">
+          <div class="list-group">
+              <a href="https://www.w3schools.com/" target="_blank" class="list-group-item"><h2>W3Schools</h2><br/><p>Great resource for practicing what you learn</p></a>
+              <a href="https://www.youtube.com/" target="_blank" class="list-group-item"><h2>Youtube</h2><br/><p>Great resource for practicing what you learn</p></a>
+              <a href="#" class="list-group-item"><h2>Other Link</h2><br/><p>Great resource for practicing what you learn</p></a>
+          </div>
+          </div>
+            </div>
+      </div>
+    <!--Online Resources-->
+
+    </div>
+    <!--CONTAINER 4 END-->
+    </div>
+
+
+    </body>
+
+
+
+</template>
