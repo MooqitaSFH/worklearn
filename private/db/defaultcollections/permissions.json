@@ -252,6 +252,13 @@
     "read": true
   },
   {
+    "role": "owner",
+    "field": "my_balance",
+    "collection_name": "profiles",
+    "modify": true,
+    "read": true
+  },
+  {
     "role": "db_admin",
     "field": "modify",
     "collection_name": "permissions",

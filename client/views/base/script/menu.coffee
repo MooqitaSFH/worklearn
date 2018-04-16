@@ -20,6 +20,7 @@ Template.mooqita_menu.helpers
 		items.push({name: "Challenges", href: build_url("designed_challenges")})
 		items.push({name: "Education", href: build_url("learner_education")})
 
+
 		#{name: "Portfolio", href: build_url("portfolio")}
 		#filter =
 		#	collection_name: "organizations"

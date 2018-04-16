@@ -48,7 +48,7 @@ juliancwirko:s-alert
 check@1.2.5
 jparker:crypto-sha256
 gwendall:impersonate
-force-ssl
+# force-ssl
 
 # Data Generation #
 random@1.0.10

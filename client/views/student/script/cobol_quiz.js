@@ -23,6 +23,10 @@ Template.cobol_quiz.onRendered(() => {
         Session.set('cobol_quiz_score', res.cobol_quiz_score)
     })
 
+    Meteor.call('get_quiz_scores', (err, res) => {
+        Session.set('cobol_quiz_score', res.cobol_quiz_score)
+    })
+
     this.$('#cobol_quiz').submit(event => {
         event.preventDefault()
         var submitted_answers = this.$('#cobol_quiz').serializeArray()

@@ -125,8 +125,8 @@ Template.challenge_design.helpers
 		return ""
 	
 	course_options:() ->
-		return [{value:"", label:"No subject"}
-			{value:"comp_thinking", label:"Comp Thinking"}
+		return [{value:"", label:"--Select Subject--"}
+			{value:"comp_thinking", label:"Computational Thinking"}
 			{value:"cobol", label:"COBOL"}
 			{value:"py", label:"Python"}]
 

@@ -3,9 +3,17 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra'
 Template.portfolio.onCreated () ->
 	self = this
 
+	Meteor.call 'get_course_progress',
+		(err, res) ->
+			Session.set('course_progress', res)
+
 	Meteor.call 'get_quiz_scores',
 		(err, res) ->
 			Session.set('quiz_scores', res)
+
+	Meteor.call 'get_my_balance',
+		(err, res) ->
+			Session.set('my_balance', res)
 
 	self.autorun () ->
 		s_id = FlowRouter.getParam('user_id')
@@ -52,3 +60,9 @@ Template.portfolio_review.helpers
 Template.portfolio_basic.helpers
 	quiz_scores: () ->
 		return Session.get('quiz_scores')
+	
+	course_progress: () ->
+		return Session.get('course_progress')
+
+	my_balance: () ->
+		return Session.get('my_balance')

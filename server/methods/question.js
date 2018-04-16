@@ -29,10 +29,6 @@ Meteor.methods({
             throw new Meteor.Error('Unable to submit.')
         }
 
-        if(inserted_correctly) {
-            console.log('Inserted correctly. ID is: ' + inserted_correctly)
-        }
-
         return true
     },
 
@@ -133,7 +129,19 @@ Meteor.methods({
             return false
         }
 
-        modify_field_unprotected(Profiles, profile._id, 'cobol_quiz_score', score)
+        if(profile.my_balance != undefined) {
+            new_balance = profile.my_balance
+
+        var score_float = parseFloat(score)
+
+        if(score_float >= 70.00) {
+            modify_field_unprotected(Profiles, profile._id, 'cobol_course_progress', 100)
+            new_balance += score_float
+            modify_field_unprotected(Profiles, profile._id, 'my_balance', new_balance)
+        } else {
+            modify_field_unprotected(Profiles, profile._id, 'cobol_course_progress', 0)
+        }
+        modify_field_unprotected(Profiles, profile._id, 'cobol_quiz_score', parseFloat(score))
     },
 
     set_comp_thinking_score: score => {
@@ -143,8 +151,21 @@ Meteor.methods({
         if(profile.comp_thinking_quiz_score != undefined) {
             false
         }
+        
+        if(profile.my_balance != undefined) {
+            new_balance = profile.my_balance
+        }
 
-        modify_field_unprotected(Profiles, profile._id, 'comp_thinking_quiz_score', score)
+        var score_float = parseFloat(score)
+
+        if(score_float >= 70.00) {
+            modify_field_unprotected(Profiles, profile._id, 'comp_thinking_course_progress', 100)
+            new_balance += score_float
+            modify_field_unprotected(Profiles, profile._id, 'my_balance', new_balance)
+        } else {
+            modify_field_unprotected(Profiles, profile._id, 'comp_thinking_course_progress', 0)
+        }
+        modify_field_unprotected(Profiles, profile._id, 'comp_thinking_quiz_score', parseFloat(score))
     },
 
     set_python_score: score => {
@@ -155,6 +176,20 @@ Meteor.methods({
             return false
         }
 
-        modify_field_unprotected(Profiles, profile._id, 'python_quiz_score', score)
+        if(profile.my_balance != undefined) {
+            new_balance = profile.my_balance
+        }
+
+        var score_float = parseFloat(score)
+
+        if(score_float >= 70.00) {
+            modify_field_unprotected(Profiles, profile._id, 'python_course_progress', 100)
+            new_balance += score_float
+            modify_field_unprotected(Profiles, profile._id, 'my_balance', new_balance)
+        } else {
+            modify_field_unprotected(Profiles, profile._id, 'python_course_progress', 0)
+        }
+
+        modify_field_unprotected(Profiles, profile._id, 'python_quiz_score', parseFloat(score))
     }
 })

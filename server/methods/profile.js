@@ -44,5 +44,13 @@ Meteor.methods({
 	
 	get_all: () => {
 		return Profiles.find().fetch()
+	},
+
+	get_my_balance: () => {
+		var user = Meteor.user()
+		var profile = Profiles.findOne({user_id: user._id})
+		var my_balance = (profile.cobol_quiz_score + profile.comp_thinking_quiz_score + profile.python_quiz_score)
+		
+		return my_balance
 	}
 })

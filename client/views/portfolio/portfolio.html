@@ -30,9 +30,40 @@
 				<h2>
 					<em>{{name}}</em>
 				</h2>
-
+				<h3><strong>Balance: ${{profile.my_balance}}</strong></h3>
+				<span type="button" class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#info"></span>
+				<div id="info" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title">How does this work?</h3>
+								</div>
+								<div class="modal-body">
+									<p>
+										Your balance is determined by passing quiz scores, completed courses, and challenge ratings.
+										The formula we use to equally represent this...
+									</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>	
 				{{>more content=self_description}}
 			</div>
+			<div class="col-sm-8 col-md-8">
+				{{#if course_progress.cobol_course_progress}}
+					<h3><strong>COBOL Progess:</strong> {{course_progress.cobol_course_progress}}%</h3> <br />
+				{{/if}}
+				{{#if course_progress.comp_thinking_course_progress}}
+					<h3><strong>Computational Thinking Progess:</strong> {{course_progress.comp_thinking_course_progress}}%</h3> <br />
+				{{/if}}
+				{{#if course_progress.python_course_progress}}
+					<h3><strong>Python Progess:</strong> {{course_progress.python_course_progress}}%</h3> <br />
+				{{/if}}
+				</div>
 			<div class="col-sm-8 col-md-8">
 				{{#if quiz_scores.cobol_quiz_score}}
 					<h3><strong>COBOL Score:</strong> {{quiz_scores.cobol_quiz_score}}%</h3> <br />
